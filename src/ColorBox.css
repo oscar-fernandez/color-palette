@@ -73,14 +73,6 @@
   margin-bottom: 0;
 }
 
-.light-text {
-  color: white;
-}
-
-.ColorBox .dark-text {
-  color: rgb(117, 117, 117);
-}
-
 .copy-overlay {
   opacity: 0;
   z-index: 0;
