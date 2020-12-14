@@ -63,6 +63,7 @@ const styles = (theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    transform: 'translateY(-10%)',
   },
   buttonContainer: {
     width: '100%',
