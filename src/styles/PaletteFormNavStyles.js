@@ -1,4 +1,5 @@
 import { drawerWidth } from '../constants'
+import sizes from './sizes'
 
 const styles = (theme) => ({
   root: {
@@ -27,11 +28,17 @@ const styles = (theme) => ({
   menuButton: {
     marginLeft: 12,
     marginRight: 20,
+    [sizes.down('xs')]: {
+      marginRight: '5px',
+    },
   },
   navBtns: {
     marginRight: '1rem',
     '& a': {
       textDecoration: 'none',
+    },
+    [sizes.down('xs')]: {
+      marginRight: '0px',
     },
   },
   button: {
