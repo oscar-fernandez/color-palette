@@ -1,8 +1,22 @@
 import sizes from './sizes'
+import bg from './bg.svg'
 
 export default {
+  '@global': {
+    '.fade-exit': {
+      opacity: 1,
+    },
+    '.fade-exit-active': {
+      opacity: 0,
+      transition: 'opacity 300ms ease-out',
+    },
+  },
   root: {
-    backgroundColor: 'blue',
+    backgroundColor: '#01a1f7',
+    backgroundImage: `url(${bg})`,
+    /* background by SVGBackgrounds.com */
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     minHeight: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
@@ -31,6 +45,9 @@ export default {
     justifyContent: 'space-between',
     alignItems: 'center',
     color: 'white',
+    '& h1': {
+      fontSize: '2rem',
+    },
     '& a': {
       textDecoration: 'none',
       color: 'white',
