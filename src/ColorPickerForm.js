@@ -20,9 +20,6 @@ class ColorPickerForm extends Component {
         ({ name }) => name.toLowerCase() !== value.toLowerCase()
       )
     )
-    ValidatorForm.addValidationRule('isColorUnique', () =>
-      this.props.colors.every(({ color }) => color !== this.state.currentColor)
-    )
   }
 
   updateCurrentColor(newColor) {
@@ -64,7 +61,7 @@ class ColorPickerForm extends Component {
             value={newColorName}
             name='newColorName'
             onChange={this.handleChange}
-            validators={['required', 'isColorNameUnique', 'isColorUnique']}
+            validators={['required', 'isColorNameUnique']}
             errorMessages={[
               'Enter a color name',
               'Color name must be unique',
