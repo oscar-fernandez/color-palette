@@ -25,6 +25,13 @@ export default {
       display: 'none',
     },
   },
+  sliderContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    '& span': {
+      marginLeft: '10px',
+    },
+  },
   slider: {
     width: '340px',
     margin: '0 20px',
@@ -34,6 +41,7 @@ export default {
     },
     '& .rc-slider-rail': {
       height: '8px',
+      transform: 'translateX(-10px)',
     },
     '& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus, .rc-slider-handle:hover': {
       backgroundColor: 'green',
@@ -45,8 +53,8 @@ export default {
       marginLeft: '-7px',
       marginTop: '-3px',
     },
-    [sizes.down('xs')]: {
-      width: '150px',
+    [sizes.down('sm')]: {
+      width: '200px',
     },
   },
   selectContainer: {
