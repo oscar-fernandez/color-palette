@@ -1,9 +1,10 @@
 export default {
   root: {
+    width: '232px',
     backgroundColor: 'white',
     border: '1px solid black',
     borderRadius: '5px',
-    padding: '0.5rem',
+    padding: '7px',
     position: 'relative',
     overflow: 'hidden',
     cursor: 'pointer',

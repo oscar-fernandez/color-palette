@@ -13,20 +13,26 @@ class PaletteList extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.container}>
-          <nav className={classes.nav}>
-            <h1>React Colors</h1>
-            <Link to='/palette/new'>Create Palette</Link>
-          </nav>
-          <div className={classes.palettes}>
-            {palettes.map((palette) => (
-              <MiniPalette
-                {...palette}
-                handleClick={() => this.goToPalette(palette.id)}
-                handleDelete={deletePalette}
-                key={palette.id}
-                id={palette.id}
-              />
-            ))}
+          <div className={classes.navContainer}>
+            <nav className={classes.nav}>
+              <h1>React Colors</h1>
+              <Link to='/palette/new'>Create Palette</Link>
+            </nav>
+          </div>
+          <div className={classes.listContainer}>
+            <div className={classes.palettes}>
+              {palettes.map((palette) => (
+                <div className={classes.paletteContainer}>
+                  <MiniPalette
+                    {...palette}
+                    handleClick={() => this.goToPalette(palette.id)}
+                    handleDelete={deletePalette}
+                    key={palette.id}
+                    id={palette.id}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
