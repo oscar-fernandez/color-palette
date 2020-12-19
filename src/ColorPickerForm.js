@@ -20,6 +20,9 @@ class ColorPickerForm extends Component {
         ({ name }) => name.toLowerCase() !== value.toLowerCase()
       )
     )
+    ValidatorForm.addValidationRule('isColorUnique', () =>
+      this.props.colors.every(({ color }) => color !== this.state.currentColor)
+    )
   }
 
   updateCurrentColor(newColor) {
@@ -52,7 +55,7 @@ class ColorPickerForm extends Component {
           onChangeComplete={this.updateCurrentColor}
           className={classes.picker}
         />
-        <ValidatorForm onSubmit={this.handleSubmit}>
+        <ValidatorForm onSubmit={this.handleSubmit} instantValidate={false}>
           <TextValidator
             placeholder='Color Name'
             variant='filled'
@@ -61,11 +64,11 @@ class ColorPickerForm extends Component {
             value={newColorName}
             name='newColorName'
             onChange={this.handleChange}
-            validators={['required', 'isColorNameUnique']}
+            validators={['required', 'isColorUnique', 'isColorNameUnique']}
             errorMessages={[
               'Enter a color name',
-              'Color name must be unique',
               'This color is already in your palette',
+              'Color name must be unique',
             ]}
           />
           <Button
