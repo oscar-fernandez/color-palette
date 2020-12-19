@@ -1,7 +1,7 @@
 import chroma from 'chroma-js'
 import sizes from './sizes'
 
-export default {
+const styles = {
   textColor: {
     color: (props) =>
       chroma(props.background).luminance() <= 0.5 ? 'white' : 'rgb(85, 85, 85)',
@@ -137,3 +137,5 @@ export default {
     transitionDelay: '0.3s',
   },
 }
+
+export default styles

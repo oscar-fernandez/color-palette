@@ -1,4 +1,4 @@
-export default {
+const styles = {
   root: {
     width: '232px',
     backgroundColor: 'white',
@@ -47,3 +47,5 @@ export default {
     opacity: '0',
   },
 }
+
+export default styles

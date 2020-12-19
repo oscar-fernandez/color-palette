@@ -1,7 +1,7 @@
 import sizes from './sizes'
 import bg from './bg.svg'
 
-export default {
+const styles = {
   '@global': {
     '.fade-exit': {
       opacity: 1,
@@ -87,3 +87,5 @@ export default {
     margin: 'auto',
   },
 }
+
+export default styles

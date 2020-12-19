@@ -1,6 +1,6 @@
 import sizes from './sizes'
 
-export default {
+const styles = {
   Palette: {
     height: '100vh',
   },
@@ -34,7 +34,6 @@ export default {
       background: 'rgba(255, 255, 255, 0.3)',
       fontSize: '1rem',
       lineHeight: '30px',
-      color: '#fff',
       textTransform: 'uppercase',
       border: 'none',
       cursor: 'pointer',
@@ -51,3 +50,5 @@ export default {
     },
   },
 }
+
+export default styles

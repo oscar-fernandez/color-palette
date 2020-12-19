@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import MiniPalette from './MiniPalette'
+import { withStyles } from '@material-ui/styles'
 import Dialog from '@material-ui/core/Dialog'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Avatar from '@material-ui/core/Avatar'
@@ -12,8 +14,6 @@ import CheckIcon from '@material-ui/icons/Check'
 import CloseIcon from '@material-ui/icons/Close'
 import blue from '@material-ui/core/colors/blue'
 import red from '@material-ui/core/colors/red'
-import { withStyles } from '@material-ui/styles'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import styles from './styles/PaletteListStyles'
 
 class PaletteList extends Component {
@@ -74,7 +74,7 @@ class PaletteList extends Component {
         </div>
         <Dialog
           open={openDeleteDialog}
-          aria-labelled-by='delete-dialog-title'
+          aria-labelledby='delete-dialog-title'
           onClose={this.closeDialog}
         >
           <DialogTitle id='delete-dialog-title'>
