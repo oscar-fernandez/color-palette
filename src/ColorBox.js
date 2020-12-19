@@ -42,7 +42,7 @@ class ColorBox extends Component {
             }`}
           >
             <h1>Copied!</h1>
-            <p className={classes.textColor}>{background}</p>
+            <p className={classes.textColor}>{background.toUpperCase()}</p>
           </div>
           <div>
             <div>
